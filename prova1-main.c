@@ -15,7 +15,7 @@ ListaGen *insere_aluno(ListaGen *head, int x, char y[50])
 {
     Aluno *p = (Aluno *)malloc(sizeof(Aluno));
     p->matricula = x;
-    p->nome[50] = y;
+    strcpy(p->nome, y);
     return lgen_insere(head, p);
 }
 
@@ -28,12 +28,12 @@ void imprime(void *info)
 
 void busca(void *dado, void *dado2)
 {
-    Aluno *p = (Aluno*)dado;
-    Aluno *p2 = (Aluno*)dado2;
+    Aluno *p = (Aluno *)dado;
+    Aluno *p2 = (Aluno *)dado2;
     if (p->matricula == p2->matricula)
     {
         printf("%i\n", p->matricula);
-        printf("%s\n", p2->nome);
+        puts(p->nome);
     }
 }
 void vazia(void *info)
@@ -79,6 +79,8 @@ int main()
             break;
 
         case 2:
+            printf("Digite o numero da matricula: \n");
+            scanf("%i", &d);
             lgen_busca(phead, busca, &d);
             fflush(stdin);
             break;
