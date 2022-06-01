@@ -34,3 +34,15 @@ void lgen_vazia(ListaGen *head, void (*cb)(void *))
 {
     cb(head);
 }
+ListaGen *lgen_free(ListaGen *head)
+{
+    ListaGen *aux;
+    while (head != NULL)
+    {
+        aux = head;
+        head = head->prox;
+        free(aux->info);
+        free(aux);
+    }
+    return head;
+}

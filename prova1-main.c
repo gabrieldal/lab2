@@ -52,7 +52,7 @@ int main()
 {
     int opt = 0, d = 0;
     char d2[50];
-    while (opt < 6)
+    while (opt != 6)
     {
 
         printf("1. Inserir Aluno\n");
@@ -95,9 +95,12 @@ int main()
 
         case 5:
             lgen_vazia(phead, vazia);
+            fflush(stdin);
             break;
 
         case 6:
+            printf("Saindo do programa...\n");
+            lgen_free(phead);
             break;
 
         default:
