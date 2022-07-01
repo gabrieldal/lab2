@@ -51,7 +51,7 @@ ListaGen* lgen_free(ListaGen *head)// percorre a lista liberando a memória, com
 
 void lgen_vazia(ListaGen *head, void (*cb)(void*))
 {
-    cb(head);
+    cb(head);// só para não colocar print no TAD
 }
 
 void lgen_remove(ListaGen *head, int (*cb)(void*, void*, void*), void *dado)//parametros errados talvez
