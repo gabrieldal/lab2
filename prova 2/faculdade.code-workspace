@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "..\\.."
+		},
+		{
+			"path": "..\\..\\..\\AOC 2"
+		},
+		{
+			"path": "..\\..\\..\\java stuff"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"TAD.C": "cpp"
+		}
+	}
+}
